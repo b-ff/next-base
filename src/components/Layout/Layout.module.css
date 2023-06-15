@@ -1,0 +1,15 @@
+.header,
+.main,
+.footer {
+  width: 100%;
+}
+
+.header,
+.main {
+  border-bottom: 1px solid #ddd;
+}
+
+.main {
+  flex: 1;
+  min-height: 300px;
+}

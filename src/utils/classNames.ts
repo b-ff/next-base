@@ -1,0 +1,1 @@
+export const classNames = (list: string[]): string => list.filter(Boolean).join(' ')
