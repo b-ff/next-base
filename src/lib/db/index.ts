@@ -1,6 +1,6 @@
-import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import { CONNECTION_STRING } from "@/config";
+import { drizzle } from "drizzle-orm/postgres-js";
+import { DB_URL } from "@/config";
 
-const client = postgres(CONNECTION_STRING);
+const client = postgres(DB_URL);
 export const db = drizzle(client);

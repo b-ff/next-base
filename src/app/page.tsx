@@ -1,7 +1,9 @@
+import { Layout } from "@/components/Layout";
+
 export default function Home() {
   return (
-    <main>
+    <Layout>
       <h1>Let it be index page!</h1>
-    </main>
+    </Layout>
   );
 }

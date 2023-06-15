@@ -1,13 +1,33 @@
 :root {
-  --spacing: 4px;
+  --spacing_1x: 4px;
+  --spacing_2x: calc(var(--spacing_1x) * 2);
+  --spacing_3x: calc(var(--spacing_1x) * 3);
+  --spacing_4x: calc(var(--spacing_1x) * 4);
+  --spacing_5x: calc(var(--spacing_1x) * 5);
+  --spacing_6x: calc(var(--spacing_1x) * 6);
 
   --color_background_primary: #fff;
   --color_font_primary: #000;
+  --color_border_primary: #ddd;
+
+  --font_family_primary: "Open Sans", serif;
+  --font_family_headings: "Montserrat", sans-serif;
+
+  --font_size_regular: 16px;
 }
 
 html,
 body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font_family_primary);
+  font-size: var(--font_size_regular);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
