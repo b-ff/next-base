@@ -1,4 +1,8 @@
 :root {
+  --spacing: 4px;
+
+  --color_background_primary: #fff;
+  --color_font_primary: #000;
 }
 
 html,
