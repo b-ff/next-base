@@ -1,8 +1,8 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "c9c788af-088c-47d8-95af-4e127d90a997",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "7da5c4df-5b15-4437-b10b-506abeb757ef",
+  "prevId": "997a67fe-ad5b-46a5-bd68-ca8c13435931",
   "tables": {
     "accounts": {
       "name": "accounts",
@@ -18,7 +18,7 @@
           "name": "user_id",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "type": {
           "name": "type",
@@ -105,8 +105,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -125,19 +125,19 @@
           "name": "expires",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "session_token": {
           "name": "session_token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "user_id": {
           "name": "user_id",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "created_at": {
           "name": "created_at",
@@ -164,8 +164,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -190,7 +190,7 @@
           "name": "email",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "email_verified": {
           "name": "email_verified",
@@ -235,7 +235,7 @@
           "name": "token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "expires": {
           "name": "expires",

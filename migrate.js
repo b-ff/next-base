@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "./.env.local" });
 const drizzle = require("drizzle-orm/postgres-js").drizzle;
 const migrate = require("drizzle-orm/postgres-js/migrator").migrate;
 const postgres = require("postgres");

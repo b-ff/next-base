@@ -1,8 +1,8 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "c9c788af-088c-47d8-95af-4e127d90a997",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "44c311cd-2aee-4845-be56-b64c3bb075b8",
+  "prevId": "61137e11-f571-4bde-97c0-b824f3fbaec5",
   "tables": {
     "accounts": {
       "name": "accounts",
@@ -105,8 +105,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -131,7 +131,7 @@
           "name": "session_token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "user_id": {
           "name": "user_id",
@@ -164,8 +164,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -190,7 +190,7 @@
           "name": "email",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "email_verified": {
           "name": "email_verified",
@@ -235,7 +235,7 @@
           "name": "token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "expires": {
           "name": "expires",

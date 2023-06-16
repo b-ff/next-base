@@ -1,5 +1,8 @@
 import React from "react";
 import { fontsClassName } from "../src/fonts";
+import { SessionProvider } from "next-auth/react";
+
+import "../src/app/globals.css";
 
 const preview = {
   parameters: {
@@ -13,9 +16,13 @@ const preview = {
   },
   decorators: [
     (Story) => (
-      <section className={fontsClassName}>
-        <Story />
-      </section>
+      <div style={{ border: "1px solid #ddd" }}>
+        <SessionProvider>
+          <section className={fontsClassName}>
+            <Story />
+          </section>
+        </SessionProvider>
+      </div>
     ),
   ],
 };

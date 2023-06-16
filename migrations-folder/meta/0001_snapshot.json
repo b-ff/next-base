@@ -1,8 +1,8 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "c9c788af-088c-47d8-95af-4e127d90a997",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "fde87cf8-9d69-42e0-bd77-2c3623269fe8",
+  "prevId": "c9c788af-088c-47d8-95af-4e127d90a997",
   "tables": {
     "accounts": {
       "name": "accounts",
@@ -190,7 +190,7 @@
           "name": "email",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "email_verified": {
           "name": "email_verified",

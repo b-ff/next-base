@@ -8,12 +8,14 @@
 
   --color_background_primary: #fff;
   --color_font_primary: #000;
+  --color_font_neutral: #aaa;
   --color_border_primary: #ddd;
 
   --font_family_primary: "Open Sans", serif;
   --font_family_headings: "Montserrat", sans-serif;
 
   --font_size_regular: 16px;
+  --font_size_small: 12px;
 }
 
 html,

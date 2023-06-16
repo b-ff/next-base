@@ -1,18 +1,27 @@
 import { FC } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 export const Auth: FC = () => {
   const { data: session } = useSession();
 
-  return session ? (
-    <>
-      Signed in as {session.user?.email} <br />
-      <button onClick={() => signOut()}>Sign out</button>
-    </>
-  ) : (
-    <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
-    </>
+  return (
+    <div>
+      {session ? (
+        <>
+          Signed in as {session.user?.name}
+          {" | "}
+          <Link href="#" onClick={() => signOut()}>
+            Sign out
+          </Link>
+        </>
+      ) : (
+        <>
+          <Link href="#" onClick={() => signIn()}>
+            Sign in
+          </Link>
+        </>
+      )}
+    </div>
   );
 };

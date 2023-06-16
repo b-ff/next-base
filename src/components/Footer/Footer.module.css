@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color_border_primary);
+  padding: var(--spacing_4x) var(--spacing_4x);
+  color: var(--color_font_neutral);
+  font-size: var(--font_size_small);
+}
+
+.footer a {
+  color: var(--color_font_neutral);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color_font_neutral);
+}
