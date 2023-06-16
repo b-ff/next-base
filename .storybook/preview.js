@@ -1,6 +1,6 @@
 import React from "react";
 import { fontsClassName } from "../src/fonts";
-import { SessionProvider } from "next-auth/react";
+import { App } from "@/components/App";
 
 import "../src/app/globals.css";
 
@@ -17,11 +17,11 @@ const preview = {
   decorators: [
     (Story) => (
       <div style={{ border: "1px solid #ddd" }}>
-        <SessionProvider>
+        <App>
           <section className={fontsClassName}>
             <Story />
           </section>
-        </SessionProvider>
+        </App>
       </div>
     ),
   ],

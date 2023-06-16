@@ -1,9 +1,12 @@
+import { App } from "@/components/App";
 import { Layout } from "@/components/Layout";
 
 export default function Home() {
   return (
-    <Layout>
-      <h1>Let it be index page!</h1>
-    </Layout>
+    <App>
+      <Layout>
+        <h1>Let it be index page!</h1>
+      </Layout>
+    </App>
   );
 }
