@@ -45,7 +45,7 @@ export const accounts = pgTable('accounts', {
   expiresAt: integer('expires_at'),
   tokenType: varchar('token_type', { length: 256 }),
   scope: varchar('scope', { length: 256 }),
-  idToken: varchar('id_token', { length: 256 }),
+  idToken: text('id_token'),
   sessionState: varchar('session_state', { length: 256 }),
 
   createdAt: timestamp('created_at', { mode: "date" }),

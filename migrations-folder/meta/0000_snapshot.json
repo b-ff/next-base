@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "dee91e96-4ce1-4dd5-9fc6-20941451702f",
+  "id": "a53d40e7-9775-4a3e-9016-cc8b2a132321",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "accounts": {
@@ -70,7 +70,7 @@
         },
         "id_token": {
           "name": "id_token",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },

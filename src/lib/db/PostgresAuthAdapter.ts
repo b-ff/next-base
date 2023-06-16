@@ -11,15 +11,15 @@ export function PostgresAuthAdapter(db: PostgresJsDatabase<Record<string, never>
       const values = {
         id: uuid(),
         ...user,
-        name: '',
-        image: '',
         createdAt: new Date(),
         updatedAt: new Date()
       }
 
       const [createdUser] = await db.insert(users).values(values).returning({
         id: users.id,
+        name: users.name,
         email: users.email,
+        image: users.image,
         emailVerified: users.emailVerified
       })
 
@@ -71,14 +71,28 @@ export function PostgresAuthAdapter(db: PostgresJsDatabase<Record<string, never>
       return deletedUser
     },
     async linkAccount(account) {
+      const {
+        access_token: accessToken,
+        id_token: idToken,
+        expires_at: expiresAt,
+        token_type: tokenType,
+        ...rest
+      } = account
+
       const values = {
-        ...account,
+        ...rest,
+        accessToken,
+        idToken,
+        expiresAt,
+        tokenType,
         id: uuid(),
         createdAt: new Date(),
         updatedAt: new Date()
       }
 
-      await db.insert(accounts).values(values)
+      const [createdAccount] = await db.insert(accounts).values(values)
+
+      return createdAccount
     },
     async unlinkAccount({ providerAccountId, provider }) {
       return
