@@ -7,6 +7,7 @@
   --spacing_6x: calc(var(--spacing_1x) * 6);
 
   --color_background_primary: #fff;
+  --color_background_emphasised: #aaa;
   --color_font_primary: #000;
   --color_font_neutral: #aaa;
   --color_border_primary: #ddd;
