@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "c9c788af-088c-47d8-95af-4e127d90a997",
+  "id": "dee91e96-4ce1-4dd5-9fc6-20941451702f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "accounts": {
@@ -18,7 +18,7 @@
           "name": "user_id",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "type": {
           "name": "type",
@@ -105,8 +105,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -125,19 +125,19 @@
           "name": "expires",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "session_token": {
           "name": "session_token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "user_id": {
           "name": "user_id",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "created_at": {
           "name": "created_at",
@@ -164,8 +164,8 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onDelete": "cascade",
+          "onUpdate": "cascade"
         }
       },
       "compositePrimaryKeys": {}
@@ -190,7 +190,7 @@
           "name": "email",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "email_verified": {
           "name": "email_verified",
@@ -235,13 +235,13 @@
           "name": "token",
           "type": "varchar(256)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "expires": {
           "name": "expires",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "created_at": {
           "name": "created_at",

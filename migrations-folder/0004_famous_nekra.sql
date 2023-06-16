@@ -1,2 +1,0 @@
-ALTER TABLE "accounts" ALTER COLUMN "user_id" SET NOT NULL;
-ALTER TABLE "sessions" ALTER COLUMN "user_id" SET NOT NULL;
