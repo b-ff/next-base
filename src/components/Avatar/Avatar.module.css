@@ -3,6 +3,8 @@
   border-radius: 50%;
   overflow: hidden;
   background-color: var(--color_border_primary);
+  margin: 0;
+  padding: 0;
 }
 
 .initials {

@@ -1,0 +1,22 @@
+.auth {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing_2x);
+}
+
+.auth a {
+  font-size: var(--font_size_small);
+  color: var(--color_font_neutral);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 500;
+  font-size: var(--font_size_regular);
+}

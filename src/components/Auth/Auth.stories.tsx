@@ -1,22 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Layout } from "./Layout";
+import { Auth } from "./Auth";
 import { SessionContext, SessionContextValue } from "next-auth/react";
+import { Session } from "next-auth";
 
-const meta: Meta<typeof Layout> = {
-  component: Layout,
+const meta: Meta<typeof Auth> = {
+  component: Auth,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Layout>;
-
-export const Primary: Story = {
-  args: {
-    children: "Content",
-  },
-};
+type Story = StoryObj<typeof Auth>;
 
 export const SignedIn: Story = {
   args: {},
@@ -36,8 +31,12 @@ export const SignedIn: Story = {
 
     return (
       <SessionContext.Provider value={fakeSession as SessionContextValue}>
-        <Layout>Content</Layout>
+        <Auth />
       </SessionContext.Provider>
     );
   },
+};
+
+export const SignedOut: Story = {
+  args: {},
 };
