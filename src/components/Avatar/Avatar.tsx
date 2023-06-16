@@ -1,5 +1,5 @@
 "use client";
-import { FC, HTMLProps, ReactNode } from "react";
+import { FC, HTMLProps, ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./Avatar.module.css";
 import { classNames } from "@/utils";
 
@@ -23,6 +23,26 @@ export const Avatar: FC<AvatarProps> = (props) => {
     ...rest
   } = props;
 
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  const [showImage, setShowImage] = useState<boolean>(Boolean(src));
+
+  useEffect(() => {
+    const imageElement = imageRef.current;
+
+    const loadErrorHandler = () => setShowImage(false);
+
+    if (showImage && imageElement) {
+      imageElement.addEventListener("error", loadErrorHandler);
+    }
+
+    return () => {
+      if (imageElement) {
+        imageElement.removeEventListener("error", loadErrorHandler);
+      }
+    };
+  }, [imageRef, showImage, setShowImage]);
+
   return (
     <figure
       className={classNames([styles.avatar, className])}
@@ -39,7 +59,9 @@ export const Avatar: FC<AvatarProps> = (props) => {
           .map((word) => word[0])
           .join("")}
       </div>
-      {Boolean(src) && <img src={src} alt={name} className={styles.image} />}
+      {showImage && (
+        <img ref={imageRef} src={src} alt={name} className={styles.image} />
+      )}
     </figure>
   );
 };

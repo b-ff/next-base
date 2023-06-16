@@ -19,8 +19,6 @@ export const opensans = Roboto({
   variable: '--font_family_secondary'
 });
 
-console.log(montserrat)
-
 export const fontsStyle = {
   '--font_family_primary': roboto.style.fontFamily,
   '--font_family_secondary': opensans.style.fontFamily,
