@@ -1,7 +1,8 @@
 import React from "react";
-import { fontsClassName } from "../src/fonts";
+import { fontsStyle, roboto } from "../src/fonts";
 import { App } from "@/components/App";
 
+import "../src/app/reset.css";
 import "../src/app/globals.css";
 
 const preview = {
@@ -16,11 +17,12 @@ const preview = {
   },
   decorators: [
     (Story) => (
-      <div style={{ border: "1px solid #ddd" }}>
+      <div
+        style={{ ...fontsStyle, border: "1px solid #ddd" }}
+        className={roboto.className}
+      >
         <App>
-          <section className={fontsClassName}>
-            <Story />
-          </section>
+          <Story />
         </App>
       </div>
     ),

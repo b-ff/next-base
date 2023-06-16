@@ -12,10 +12,11 @@
   --color_font_neutral: #aaa;
   --color_border_primary: #ddd;
 
-  --font_family_primary: "Open Sans", serif;
-  --font_family_headings: "Montserrat", sans-serif;
-
   --font_size_regular: 16px;
+  --font_size_h1: 42px;
+  --font_size_h2: 36px;
+  --font_size_h3: 32px;
+  --font_size_h4: 24px;
   --font_size_small: 12px;
 }
 
@@ -33,4 +34,44 @@ body {
 body {
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-family: var(--font_family_headings);
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: var(--font_size_h1);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: var(--font_size_h2);
+}
+
+h3 {
+  font-size: var(--font_size_h3);
+}
+
+h4 {
+  font-size: var(--font_size_h4);
+}
+
+small {
+  font-size: var(--font_size_regular);
 }

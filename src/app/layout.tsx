@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/auth";
-import { fontsClassName } from "@/fonts";
+import { fontsStyle } from "@/fonts";
 
 import "./reset.css";
 import "./globals.css";
@@ -27,7 +27,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       </Head>
-      <body className={fontsClassName}>{children}</body>
+      <body style={fontsStyle as any}>{children}</body>
     </html>
   );
 }

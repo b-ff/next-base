@@ -1,9 +1,5 @@
 .auth {
   display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--spacing_2x);
 }
 
 .auth a {
@@ -17,6 +13,6 @@
 }
 
 .name {
-  font-weight: 500;
-  font-size: var(--font_size_regular);
+  font-weight: 400;
+  font-size: var(--font_size_small);
 }

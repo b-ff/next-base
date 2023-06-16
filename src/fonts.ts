@@ -1,20 +1,31 @@
 import { Montserrat, Open_Sans, Roboto } from "next/font/google";
 import { classNames } from "./utils";
 
-const montserrat = Montserrat({
-  weight: ["100", "400", "700"],
+export const montserrat = Montserrat({
+  weight: ["100", "400", "700", "800", "900"],
   subsets: ["cyrillic"],
+  variable: '--font_family_headings'
 });
 
-const roboto = Open_Sans({
+export const roboto = Open_Sans({
   weight: ["400", "800"],
   subsets: ["cyrillic"],
+  variable: '--font_family_primary'
 });
 
-const opensans = Roboto({
+export const opensans = Roboto({
   weight: ["400", "500", "900"],
   subsets: ["cyrillic"],
+  variable: '--font_family_secondary'
 });
+
+console.log(montserrat)
+
+export const fontsStyle = {
+  '--font_family_primary': roboto.style.fontFamily,
+  '--font_family_secondary': opensans.style.fontFamily,
+  '--font_family_headings': montserrat.style.fontFamily,
+}
 
 export const fontsClassName = classNames([
   montserrat.className,
