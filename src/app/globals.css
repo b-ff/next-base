@@ -76,6 +76,14 @@ small {
   font-size: var(--font_size_regular);
 }
 
+ul {
+  margin-inline-start: 1em;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 a,
 a:visited {
   display: inline-block;
