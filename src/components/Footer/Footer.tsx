@@ -12,6 +12,7 @@ export type FooterProps = {
 export const Footer: FC<FooterProps> = ({ children }) => {
   return (
     <header className={styles.footer}>
+      {children}
       <span>
         <a
           href="https://github.com/b-ff"
@@ -22,7 +23,6 @@ export const Footer: FC<FooterProps> = ({ children }) => {
         </a>{" "}
         x {new Date().getFullYear()} {children}
       </span>
-      {children}
     </header>
   );
 };

@@ -75,3 +75,19 @@ h4 {
 small {
   font-size: var(--font_size_regular);
 }
+
+a,
+a:visited {
+  display: inline-block;
+  padding-block-end: 1px;
+  color: var(--color_font_primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+a:hover,
+a:active,
+a.active {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}

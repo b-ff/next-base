@@ -3,6 +3,7 @@ import { FC, ReactNode } from "react";
 import styles from "./Header.module.css";
 import { Auth } from "../Auth";
 import Link from "next/link";
+import { Flex } from "../Flex";
 
 export type HeaderProps = {
   children?: ReactNode;
@@ -14,7 +15,9 @@ export type HeaderProps = {
 export const Header: FC<HeaderProps> = ({ children }) => {
   return (
     <header className={styles.header}>
-      <Link href="/">Home</Link>
+      <Flex direction="row" gap={2}>
+        <Link href="/">Home</Link> &raquo;
+      </Flex>
       {children}
       <Auth />
     </header>

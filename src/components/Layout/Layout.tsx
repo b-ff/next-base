@@ -16,14 +16,7 @@ export type LayoutProps = {
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <Header>
-        <Flex direction="row" gap={4}>
-          <Link href="/profile">Profile</Link>
-          <Link href="#">Link 1</Link>
-          <Link href="#">Link 2</Link>
-          <Link href="#">Link 3</Link>
-        </Flex>
-      </Header>
+      <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
     </>

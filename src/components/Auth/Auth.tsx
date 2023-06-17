@@ -11,11 +11,17 @@ export const Auth: FC = () => {
 
   return session ? (
     <Flex gap={2} direction="row" className={styles.auth}>
-      <Avatar
-        src={session.user?.image ?? ""}
-        name={session.user?.name ?? ""}
-        size={36}
-      />
+      <Link
+        href="/profile"
+        title="Go to profile"
+        className={styles.profileLink}
+      >
+        <Avatar
+          src={session.user?.image ?? ""}
+          name={session.user?.name ?? ""}
+          size={36}
+        />
+      </Link>
       <Flex gap={0}>
         <strong className={styles.name}>{session.user?.name ?? "—"}</strong>
         <Link href="#" onClick={() => signOut()}>
