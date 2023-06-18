@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Rename `.env.local.example` to `.env.local` and replace placeholders with real data
+
+Run `yarn migrate` to initialize DB schema.
+
 First, run the development server:
 
 ```bash
