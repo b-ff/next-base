@@ -20,9 +20,9 @@ export const Posts: FC = () => {
   return isLoading ? (
     <>Loading...</>
   ) : posts.length ? (
-    <Flex gap={2}>
+    <Flex gap={6}>
       {posts.map((post: PostModel) => (
-        <Post post={post} key={post.id} />
+        <Post post={post} key={post.id} preview />
       ))}
     </Flex>
   ) : (

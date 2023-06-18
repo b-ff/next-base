@@ -1,5 +1,6 @@
 import { authOptions } from "@/auth";
 import { db } from "@/lib/db";
+import { PostsService } from "@/lib/db";
 import { posts } from "@/schema";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -32,7 +33,7 @@ export async function POST(req: Request) {
     updatedAt: new Date(),
   };
 
-  const [result] = await db.insert(posts).values(values).returning();
+  const result = await PostsService.createPost(values);
 
   return NextResponse.json(result);
 }

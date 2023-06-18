@@ -10,7 +10,6 @@ export default function Home() {
       <Layout>
         <Flex padding={6} gap={6}>
           <h1>Posts</h1>
-          <Posts />
           <ul>
             <li>
               <Link href="/posts/create">Create post</Link>
@@ -19,6 +18,7 @@ export default function Home() {
               <Link href="/profile">Profile</Link>
             </li>
           </ul>
+          <Posts />
         </Flex>
       </Layout>
     </App>
