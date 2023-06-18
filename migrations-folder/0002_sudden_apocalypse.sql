@@ -1,0 +1,10 @@
+ALTER TABLE "accounts" ALTER COLUMN "created_at" SET NOT NULL;
+ALTER TABLE "accounts" ALTER COLUMN "updated_at" SET NOT NULL;
+ALTER TABLE "posts" ALTER COLUMN "created_at" SET NOT NULL;
+ALTER TABLE "posts" ALTER COLUMN "updated_at" SET NOT NULL;
+ALTER TABLE "sessions" ALTER COLUMN "created_at" SET NOT NULL;
+ALTER TABLE "sessions" ALTER COLUMN "updated_at" SET NOT NULL;
+ALTER TABLE "users" ALTER COLUMN "created_at" SET NOT NULL;
+ALTER TABLE "users" ALTER COLUMN "updated_at" SET NOT NULL;
+ALTER TABLE "verification_tokens" ALTER COLUMN "created_at" SET NOT NULL;
+ALTER TABLE "verification_tokens" ALTER COLUMN "updated_at" SET NOT NULL;

@@ -11,8 +11,8 @@ export const users = pgTable('users', {
   emailVerified: timestamp('email_verified', { mode: "date" }),
   image: text('image'),
 
-  createdAt: timestamp('created_at', { mode: "date" }),
-  updatedAt: timestamp('updated_at', { mode: "date" }),
+  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
 });
 
 export const verificationTokens = pgTable('verification_tokens', {
@@ -20,8 +20,8 @@ export const verificationTokens = pgTable('verification_tokens', {
   token: varchar('token', { length: 256 }).notNull(),
   expires: timestamp('expires', { mode: "date" }).notNull(),
 
-  createdAt: timestamp('created_at', { mode: "date" }),
-  updatedAt: timestamp('updated_at', { mode: "date" }),
+  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
 })
 
 export const sessions = pgTable('sessions', {
@@ -30,8 +30,8 @@ export const sessions = pgTable('sessions', {
   sessionToken: varchar('session_token', { length: 256 }).notNull(),
   userId: varchar('user_id', { length: 256 }).references(() => users.id, cascadeActions).notNull(),
 
-  createdAt: timestamp('created_at', { mode: "date" }),
-  updatedAt: timestamp('updated_at', { mode: "date" }),
+  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
 })
 
 export const accounts = pgTable('accounts', {
@@ -48,11 +48,22 @@ export const accounts = pgTable('accounts', {
   idToken: text('id_token'),
   sessionState: varchar('session_state', { length: 256 }),
 
-  createdAt: timestamp('created_at', { mode: "date" }),
-  updatedAt: timestamp('updated_at', { mode: "date" }),
+  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+})
+
+export const posts = pgTable('posts', {
+  id: serial('id').primaryKey(),
+  userId: varchar('user_id', { length: 256 }).references(() => users.id, cascadeActions).notNull(),
+  title: varchar('title', { length: 256 }).notNull(),
+  body: text('body').notNull(),
+
+  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
 })
 
 export type User = InferModel<typeof users>
 export type VerificationToken = InferModel<typeof verificationTokens>
 export type Session = InferModel<typeof sessions>
 export type Account = InferModel<typeof accounts>
+export type Post = InferModel<typeof posts>

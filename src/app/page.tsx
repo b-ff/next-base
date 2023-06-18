@@ -26,10 +26,10 @@ export default function Home() {
           <p>Shall we begin?</p>
           <ul>
             <li>
-              <Link href="/profile">Profile</Link>
+              <Link href="/posts">Posts</Link>
             </li>
             <li>
-              <Link href="/posts">Posts</Link>
+              <Link href="/profile">Profile</Link>
             </li>
           </ul>
         </Flex>

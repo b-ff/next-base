@@ -8,6 +8,20 @@
       "when": 1686935637977,
       "tag": "0000_short_piledriver",
       "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1686961535862,
+      "tag": "0001_red_norrin_radd",
+      "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1686963375140,
+      "tag": "0002_sudden_apocalypse",
+      "breakpoints": false
     }
   ]
 }

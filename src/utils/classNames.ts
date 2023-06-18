@@ -1,1 +1,1 @@
-export const classNames = (list: string[]): string => list.filter(Boolean).join(' ')
+export const classNames = (list: Array<string | null | undefined>): string => list.filter(Boolean).join(' ')
