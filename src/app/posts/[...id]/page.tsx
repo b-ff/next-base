@@ -16,12 +16,9 @@ export default async function Home({ params }: { params: { id: string } }) {
     <App>
       <Layout>
         <Flex padding={6} gap={6}>
-          <h1>Post</h1>
           <Post post={post} />
+          <Link href="/posts">&laquo; Back to all posts</Link>
           <ul>
-            <li>
-              <Link href="/posts">Posts</Link>
-            </li>
             <li>
               <Link href="/posts/create">Create another post</Link>
             </li>

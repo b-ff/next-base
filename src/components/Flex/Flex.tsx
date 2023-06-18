@@ -30,8 +30,9 @@ export const Flex: FC<FlexProps> = (props) => {
     gap: `var(--spacing_${gap}x)`,
   };
 
-  const elements =
-    Array.isArray(children) && children.length ? children : [children];
+  const elements = (
+    Array.isArray(children) && children.length ? children : [children]
+  ).filter(Boolean);
 
   return (
     <section style={combinedStyle} {...rest}>

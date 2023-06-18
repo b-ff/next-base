@@ -36,12 +36,12 @@ export const Post: FC<PostProps> = (props) => {
   return (
     <article>
       <Flex gap={4}>
-        <h2>{post.title}</h2>
+        {Boolean(preview) ? <h2>{post.title}</h2> : <h1>{post.title}</h1>}
         <small className={styles.lastModified}>{date}</small>
         <p>{body}</p>
-        {Boolean(preview) && (
+        {Boolean(preview) ? (
           <Link href={`/posts/${post.id}`}>Read more &raquo;</Link>
-        )}
+        ) : null}
       </Flex>
     </article>
   );
