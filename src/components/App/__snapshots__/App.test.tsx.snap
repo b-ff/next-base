@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component APP Should render as expected 1`] = `
+<div>
+  <div>
+    content
+  </div>
+</div>
+`;

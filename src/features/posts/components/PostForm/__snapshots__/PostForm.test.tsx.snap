@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component PostForm Should render as expected 1`] = `
+<div>
+  <form
+    action="/api/posts"
+    class="form"
+    method="POST"
+  >
+    <section
+      style="display: flex; flex-direction: column; gap: var(--spacing_2x);"
+    >
+      <div>
+        <input
+          class="title"
+          name="title"
+          placeholder="Title..."
+          type="text"
+        />
+      </div>
+      <div>
+        <textarea
+          class="body"
+          name="body"
+          placeholder="Text..."
+        />
+      </div>
+      <div>
+        <section
+          class="actions"
+          style="display: flex; flex-direction: row; gap: var(--spacing_2x);"
+        >
+          <div>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+          <div>
+            <button
+              type="reset"
+            >
+              Reset
+            </button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </form>
+</div>
+`;

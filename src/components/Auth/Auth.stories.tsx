@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Auth } from "./Auth";
 import { SessionContext, SessionContextValue } from "next-auth/react";
-import { Session } from "next-auth";
 
 const meta: Meta<typeof Auth> = {
   component: Auth,

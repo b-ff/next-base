@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Avatar Should render as expected 1`] = `
+<div>
+  <figure
+    class="avatar"
+    style="width: 24px; height: 24px;"
+  >
+    <div
+      class="initials"
+      style="font-size: 10px;"
+    >
+      JD
+    </div>
+  </figure>
+</div>
+`;

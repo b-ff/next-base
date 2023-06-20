@@ -25,7 +25,7 @@ export const Auth: FC = () => {
       <Flex gap={0}>
         <strong className={styles.name}>{session.user?.name ?? "—"}</strong>
         <Link href="#" onClick={() => signOut()}>
-          Sign out
+          Sign Out
         </Link>
       </Flex>
     </Flex>

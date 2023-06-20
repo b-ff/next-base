@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Auth Should render as expected 1`] = `
+<div>
+  <a
+    href="#"
+  >
+    Sign In / Sign Up
+  </a>
+</div>
+`;

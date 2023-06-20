@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Header Should render as expected 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <section
+      style="display: flex; flex-direction: row; gap: var(--spacing_2x);"
+    >
+      <div>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+      <div>
+         »
+      </div>
+    </section>
+    Content
+    <a
+      href="#"
+    >
+      Sign In / Sign Up
+    </a>
+  </header>
+</div>
+`;

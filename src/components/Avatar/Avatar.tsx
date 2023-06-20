@@ -1,7 +1,8 @@
 "use client";
-import { FC, HTMLProps, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, HTMLProps, useEffect, useRef, useState } from "react";
 import styles from "./Avatar.module.css";
 import { classNames } from "@/utils";
+import Image from "next/image";
 
 const DEFAULT_SIZE = 24;
 
@@ -60,7 +61,14 @@ export const Avatar: FC<AvatarProps> = (props) => {
           .join("")}
       </div>
       {showImage && (
-        <img ref={imageRef} src={src} alt={name} className={styles.image} />
+        <Image
+          width={size}
+          height={size}
+          ref={imageRef}
+          src={src}
+          alt={name}
+          className={styles.image}
+        />
       )}
     </figure>
   );
