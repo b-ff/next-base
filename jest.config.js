@@ -10,6 +10,8 @@ const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   testEnvironment: "jest-environment-jsdom",
+
+  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/e2e/"],
 };
 
 // createJestConfig returns an async function that returns a jest config -
