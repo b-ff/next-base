@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Flex Should render as expected 1`] = `
+<div>
+  <section
+    style="display: flex; flex-direction: column; gap: var(--spacing_1x);"
+  >
+    <div>
+      Foo
+    </div>
+    <div>
+      Bar
+    </div>
+    <div>
+      Zoo
+    </div>
+    <div>
+      Zar
+    </div>
+  </section>
+</div>
+`;

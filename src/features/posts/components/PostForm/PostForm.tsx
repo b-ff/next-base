@@ -1,6 +1,5 @@
 import { FC, HTMLProps } from "react";
 import { Flex } from "@/components/Flex";
-import { Post as PostModel } from "@/schema";
 import { ApiRoutes } from "@/enums/ApiRoutes";
 
 import styles from "./PostForm.module.css";

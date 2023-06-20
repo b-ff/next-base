@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Footer Should render as expected 1`] = `
+<div>
+  <header
+    class="footer"
+  >
+    Content
+    <span>
+      <a
+        href="https://github.com/b-ff"
+        rel="noopener noreffer"
+        target="_blank"
+      >
+        Slava Biryukov
+      </a>
+       
+      x 
+      2023
+       
+      Content
+    </span>
+  </header>
+</div>
+`;

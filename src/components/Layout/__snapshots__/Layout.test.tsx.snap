@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Layout Should render as expected 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <section
+      style="display: flex; flex-direction: row; gap: var(--spacing_2x);"
+    >
+      <div>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+      <div>
+         »
+      </div>
+    </section>
+    <a
+      href="#"
+    >
+      Sign In / Sign Up
+    </a>
+  </header>
+  <main
+    class="main"
+  >
+    Content
+  </main>
+  <header
+    class="footer"
+  >
+    <span>
+      <a
+        href="https://github.com/b-ff"
+        rel="noopener noreffer"
+        target="_blank"
+      >
+        Slava Biryukov
+      </a>
+       
+      x 
+      2023
+       
+    </span>
+  </header>
+</div>
+`;
