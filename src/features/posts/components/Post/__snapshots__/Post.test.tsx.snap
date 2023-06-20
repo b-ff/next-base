@@ -15,7 +15,7 @@ exports[`Component Post Should render as expected 1`] = `
         <small
           class="lastModified"
         >
-          20 June 2023 at 15:00
+          20 June 2023 at 14:00
         </small>
       </div>
       <div>
