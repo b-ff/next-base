@@ -24,6 +24,6 @@ describe("Component Avatar", () => {
     const src = img?.getAttribute("src");
 
     expect(img).not.toBeNull();
-    expect(src?.includes(encodeURIComponent(mockSrc))).toBeTruthy();
+    expect(src).toBe(mockSrc);
   });
 });

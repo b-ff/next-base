@@ -61,14 +61,8 @@ export const Avatar: FC<AvatarProps> = (props) => {
           .join("")}
       </div>
       {showImage && (
-        <Image
-          width={size}
-          height={size}
-          ref={imageRef}
-          src={src}
-          alt={name}
-          className={styles.image}
-        />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img ref={imageRef} src={src} alt={name} className={styles.image} />
       )}
     </figure>
   );
