@@ -12,7 +12,7 @@ export function PostgresAuthAdapter(db: PostgresJsDatabase<Record<string, never>
       return UsersService.create(user)
     },
     async getUser(id) {
-      return UsersService.getUser(id)
+      return UsersService.getUserById(id)
     },
     async getUserByEmail(email) {
       return UsersService.getUserByEmail(email)
