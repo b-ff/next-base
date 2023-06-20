@@ -1,4 +1,5 @@
-[![Unit-tests](https://github.com/b-ff/next-base/actions/workflows/node.js.yml/badge.svg)](https://github.com/b-ff/next-base/actions/workflows/node.js.yml)
+[![tests:unit](https://github.com/b-ff/next-base/actions/workflows/tests-unit.yml/badge.svg)](https://github.com/b-ff/next-base/actions/workflows/tests-unit.yml)
+[![tests:e2e](https://github.com/b-ff/next-base/actions/workflows/tests-e2e.yml/badge.svg)](https://github.com/b-ff/next-base/actions/workflows/tests-e2e.yml)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
