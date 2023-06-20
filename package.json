@@ -14,9 +14,12 @@
     "storybook": "storybook dev -p 6006 & yarn css:types-watch",
     "build-storybook": "storybook build",
     "prepare": "husky install",
-    "postinstall": "husky install",
-    "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "postinstall": "husky install && yarn test:e2e:install",
+    "test": "yarn test:unit:ci & wait; yarn test:e2e",
+    "test:unit": "jest --watch",
+    "test:unit:ci": "jest --ci",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "npx playwright install --with-deps"
   },
   "dependencies": {
     "@types/node": "20.3.1",
@@ -34,6 +37,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.35.1",
     "@storybook/addon-docs": "^7.0.21",
     "@storybook/addon-essentials": "^7.0.21",
     "@storybook/addon-interactions": "^7.0.21",
