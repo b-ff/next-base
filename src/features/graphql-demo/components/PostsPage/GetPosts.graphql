@@ -1,0 +1,12 @@
+query GetPosts {
+  posts {
+    id
+    author {
+      name
+    }
+    title
+    body
+    createdAt
+    updatedAt
+  }
+}

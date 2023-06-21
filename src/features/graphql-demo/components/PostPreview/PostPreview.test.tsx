@@ -1,4 +1,4 @@
-import { Post } from "./Post";
+import { PostPreview } from "./PostPreview";
 import { render } from "@testing-library/react";
 
 const mockPost = {
@@ -10,9 +10,16 @@ const mockPost = {
   updatedAt: "2023-06-20T14:00:00",
 };
 
-describe("Component Post", () => {
-  it("Should render as expected", async () => {
-    const { container } = render(<Post post={mockPost} />);
+const mockAuthor = {
+  id: "that-exact-user-id",
+  name: "John Doe",
+};
+
+describe("Component PostPreview", () => {
+  it("Should render as expected", () => {
+    const { container } = render(
+      <PostPreview post={mockPost} author={mockAuthor} />
+    );
     expect(container).toMatchSnapshot();
   });
 });
