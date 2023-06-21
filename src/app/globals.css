@@ -73,7 +73,7 @@ h4 {
 }
 
 small {
-  font-size: var(--font_size_regular);
+  font-size: var(--font_size_small);
 }
 
 ul {

@@ -22,6 +22,7 @@
     "test:e2e:install": "npx playwright install --with-deps"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
     "@apollo/server": "^4.7.4",
     "@as-integrations/next": "^2.0.0",
     "@types/node": "20.3.1",

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component PostPreview Should render as expected 1`] = `
+<div>
+  <section
+    style="display: flex; flex-direction: column; gap: var(--spacing_2x);"
+  >
+    <div>
+      <a
+        href="/posts/1"
+      >
+        <h4>
+          For whom the bell tolls?
+           »
+        </h4>
+      </a>
+    </div>
+    <div>
+      <small>
+        Written by 
+        John Doe
+         at 
+        1 January 1970 at 01:00
+      </small>
+    </div>
+  </section>
+</div>
+`;

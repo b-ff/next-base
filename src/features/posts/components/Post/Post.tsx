@@ -4,7 +4,7 @@ import { Post as PostModel } from "@/schema";
 
 import styles from "./Post.module.css";
 import Link from "next/link";
-import { DEFAULT_LANGUAGE } from "@/config";
+import { formatPostDate } from "@/utils";
 
 const PREVIEW_SIZE = 150;
 
@@ -19,10 +19,7 @@ export type PostProps = {
 export const Post: FC<PostProps> = (props) => {
   const { post, preview = false } = props;
 
-  const date = new Intl.DateTimeFormat(DEFAULT_LANGUAGE, {
-    dateStyle: "long",
-    timeStyle: "short",
-  }).format(
+  const date = formatPostDate(
     Math.max(
       new Date(post.createdAt)?.getTime(),
       new Date(post.updatedAt)?.getTime()

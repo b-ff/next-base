@@ -29,6 +29,12 @@ export default function Home() {
               <Link href="/posts">Posts</Link>
             </li>
             <li>
+              <Link href="/graphql-demo">GraphQL demo</Link>
+            </li>
+            <li>
+              <Link href="/api/graphql">Apollo Studio</Link>
+            </li>
+            <li>
               <Link href="/profile">Profile</Link>
             </li>
           </ul>

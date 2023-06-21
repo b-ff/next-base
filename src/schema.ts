@@ -8,30 +8,30 @@ export const users = pgTable('users', {
   id: varchar('id', { length: 256 }).primaryKey(),
   name: varchar('name', { length: 256 }),
   email: varchar('email', { length: 256 }).notNull(),
-  emailVerified: timestamp('email_verified', { mode: "date" }),
+  emailVerified: timestamp('email_verified', { mode: "string" }),
   image: text('image'),
 
-  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
-  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+  createdAt: timestamp('created_at', { mode: "string" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "string" }).notNull(),
 });
 
 export const verificationTokens = pgTable('verification_tokens', {
   identifier: varchar('identifier', { length: 256 }).primaryKey(),
   token: varchar('token', { length: 256 }).notNull(),
-  expires: timestamp('expires', { mode: "date" }).notNull(),
+  expires: timestamp('expires', { mode: "string" }).notNull(),
 
-  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
-  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+  createdAt: timestamp('created_at', { mode: "string" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "string" }).notNull(),
 })
 
 export const sessions = pgTable('sessions', {
   id: varchar('id', { length: 256 }).primaryKey(),
-  expires: timestamp('expires', { mode: "date" }).notNull(),
+  expires: timestamp('expires', { mode: "string" }).notNull(),
   sessionToken: varchar('session_token', { length: 256 }).notNull(),
   userId: varchar('user_id', { length: 256 }).references(() => users.id, cascadeActions).notNull(),
 
-  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
-  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+  createdAt: timestamp('created_at', { mode: "string" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "string" }).notNull(),
 })
 
 export const accounts = pgTable('accounts', {
@@ -48,8 +48,8 @@ export const accounts = pgTable('accounts', {
   idToken: text('id_token'),
   sessionState: varchar('session_state', { length: 256 }),
 
-  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
-  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+  createdAt: timestamp('created_at', { mode: "string" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "string" }).notNull(),
 })
 
 export const posts = pgTable('posts', {
@@ -58,8 +58,8 @@ export const posts = pgTable('posts', {
   title: varchar('title', { length: 256 }).notNull(),
   body: text('body').notNull(),
 
-  createdAt: timestamp('created_at', { mode: "date" }).notNull(),
-  updatedAt: timestamp('updated_at', { mode: "date" }).notNull(),
+  createdAt: timestamp('created_at', { mode: "string" }).notNull(),
+  updatedAt: timestamp('updated_at', { mode: "string" }).notNull(),
 })
 
 export type User = InferModel<typeof users>
