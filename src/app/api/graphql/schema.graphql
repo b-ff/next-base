@@ -3,6 +3,8 @@ type User {
   name: String
   email: String
   image: String
+  createdAt: String
+  updatedAt: String
 }
 
 type Post {

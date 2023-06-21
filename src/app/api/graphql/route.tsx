@@ -3,19 +3,22 @@ import { Post } from "@/schema";
 import { ApolloServer } from "@apollo/server";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import typeDefs from "./schema.graphql";
+import { asyncMapDatesToString } from "@/utils";
 
 const resolvers = {
   Query: {
     post: async (_parent: unknown, args: { id: string }) => {
-      return await PostsService.getPostById(parseInt(args.id));
+      return await asyncMapDatesToString(
+        PostsService.getPostById(parseInt(args.id))
+      );
     },
     posts: async () => {
-      return await PostsService.getPosts();
+      return await asyncMapDatesToString(PostsService.getPosts());
     },
   },
   Post: {
     author: async (parent: Post) => {
-      return await UsersService.getUserById(parent.userId);
+      return await asyncMapDatesToString(UsersService.getUser(parent.userId));
     },
   },
 };

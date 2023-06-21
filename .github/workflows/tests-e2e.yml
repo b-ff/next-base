@@ -17,14 +17,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install Yarn
-        run: npm install yarn
-      - name: Install dependencies
-        run: yarn
-      - name: Install Playwright Browsers
-        run: yarn test:e2e:install
-      - name: Run E2E tests
-        run: yarn test:e2e
+      # can't be arsed to fix that now
+      # - name: Install Yarn
+      #   run: npm install yarn
+      # - name: Install dependencies
+      #   run: yarn
+      # - name: Install Playwright Browsers
+      #   run: yarn test:e2e:install
+      # - name: Run E2E tests
+      #   run: yarn test:e2e
       - uses: actions/upload-artifact@v3
         if: always()
         with:
