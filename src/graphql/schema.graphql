@@ -20,3 +20,7 @@ type Query {
   post(id: ID!): Post
   posts: [Post]
 }
+
+type Mutation {
+  post(title: String, body: String): Post
+}
