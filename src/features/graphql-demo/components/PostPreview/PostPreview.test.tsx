@@ -6,8 +6,8 @@ const mockPost = {
   userId: "that-exact-user-id",
   title: "For whom the bell tolls?",
   body: "For those who refuse to take action and cross the boundaries. For those who complaining instead of doing things. For them we shall fire the torch and spread the light.",
-  createdAt: "2023-06-20T14:00:00",
-  updatedAt: "2023-06-20T14:00:00",
+  createdAt: "1687103690922",
+  updatedAt: "1687103690923",
 };
 
 const mockAuthor = {
