@@ -17,6 +17,24 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Create .env file
+        run: |
+          touch .env
+          echo # DB > .env
+          echo DB_HOST=${{ secrets.DB_HOST }} > .env
+          echo DB_USER=${{ secrets.DB_USER }} > .env
+          echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} > .env
+          echo DB_PORT=${{ secrets.DB_PORT }} > .env
+          echo DB_NAME=${{ secrets.DB_NAME }} > .env
+
+          echo # Auth > .env
+          echo NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }} > .env
+          echo NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }} > .env
+          echo GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} > .env
+          echo GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} > .env
+          echo GITHUB_ID=${{ secrets.GITHUB_ID }} > .env
+          echo GITHUB_SECRET=${{ secrets.GITHUB_SECRET }} > .env
+          source ./.env
       - name: Install Yarn
         run: npm install yarn
       - name: Install dependencies
