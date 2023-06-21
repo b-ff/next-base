@@ -4,7 +4,7 @@ import { and, eq } from "drizzle-orm";
 import { v4 as uuid } from 'uuid'
 
 export const UsersService = {
-  getUserById: async (id: string): Promise<User> => {
+  getUser: async (id: string): Promise<User> => {
     const [user] = await db.select().from(users).where(eq(users.id, id))
     return user
   },

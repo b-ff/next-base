@@ -15,8 +15,8 @@ export const PostPreview: FC<PostPreviewProps> = ({ post, author }) => {
     () =>
       formatPostDate(
         Math.max(
-          new Date(parseInt(post.createdAt))?.getTime(),
-          new Date(parseInt(post.updatedAt))?.getTime()
+          new Date(post.createdAt)?.getTime(),
+          new Date(post.updatedAt)?.getTime()
         )
       ),
     [post.createdAt, post.updatedAt]
