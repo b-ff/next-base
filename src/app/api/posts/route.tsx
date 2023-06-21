@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
 export async function GET(_req: Request) {
-  const data = await db.select().from(posts);
+  const data = await PostsService.getPosts();
   return NextResponse.json(data);
 }
 
@@ -29,11 +29,11 @@ export async function POST(req: Request) {
     userId: session.user.id,
     title,
     body,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   };
 
-  const result = await PostsService.createPost(values);
+  const result = await PostsService.create(values);
 
   return NextResponse.json(result);
 }

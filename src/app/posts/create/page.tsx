@@ -3,7 +3,7 @@ import { App } from "@/components/App";
 import { Flex } from "@/components/Flex";
 import { Layout } from "@/components/Layout";
 import { ApiRoutes } from "@/enums/ApiRoutes";
-import { PostForm } from "@/features/posts/components/PostForm";
+import { PostForm } from "@/components/PostForm";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";

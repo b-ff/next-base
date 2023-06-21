@@ -27,7 +27,6 @@ exports[`Component PostForm Should render as expected 1`] = `
       </div>
       <div>
         <section
-          class="actions"
           style="display: flex; flex-direction: row; gap: var(--spacing_2x);"
         >
           <div>

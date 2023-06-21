@@ -1,10 +1,10 @@
 import { Post, posts } from "@/schema"
 import { db } from "../connection";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 
 export const PostsService = {
   getPosts: async (): Promise<Post[]> => {
-    const result = await db.select().from(posts)
+    const result = await db.select().from(posts).orderBy(desc(posts.updatedAt))
     return result
   },
   getPostById: async (id: number): Promise<Post | null> => {
