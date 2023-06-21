@@ -2,6 +2,7 @@ import { PostsService, UsersService, db } from "@/lib/db";
 import { Post } from "@/schema";
 import { ApolloServer } from "@apollo/server";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
+import typeDefs from "./schema.graphql";
 
 const resolvers = {
   Query: {
@@ -18,28 +19,6 @@ const resolvers = {
     },
   },
 };
-
-const typeDefs = `#graphql
-  type User {
-    id: ID!
-    email: String
-    image: String
-  }
-
-  type Post {
-    id: ID!
-    author: User
-    title: String
-    body: String
-    createdAt: String
-    updatedAt: String
-  }
-
-  type Query {
-    post(id: ID!): Post
-    posts: [Post]
-  }
-`;
 
 const server = new ApolloServer({
   resolvers,
